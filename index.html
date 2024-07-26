@@ -6,11 +6,13 @@
     <title>Thank You</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        
         /* Reset some default styles */
         body, h1, p {
             margin: 0;
             padding: 0;
             font-family: 'Arial', sans-serif;
+            
         }
 
         /* Body styling */
@@ -20,7 +22,7 @@
             align-items: center;
             height: 100vh;
             background-color: #000;
-            overflow: hidden;
+            
             color: #fff;
         }
 
@@ -30,7 +32,8 @@
             z-index: 10;
             position: relative;
             max-width: 1000px;
-            width: 100%;
+            width: 90%;
+            margin: 0 5%;
         }
 
         .thank-you-card {
@@ -38,14 +41,12 @@
             padding: 2rem;
             border-radius: 15px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-            margin: auto;
-            max-width: 95%;
             color: #eee;
         }
 
         .thank-you-card h1 {
             color: #fff;
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
             font-weight: bold;
             text-align: center !important;
@@ -58,97 +59,121 @@
         }
 
         .confetti-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    overflow: hidden;
-    z-index: 5;
-}
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            overflow: scroll;
+            z-index: 5;
+        }
 
-.confetti {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #f00;
-    opacity: 0.7;
-    top: -20px;
-    animation: confetti 5s linear infinite;
-}
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #f00;
+            opacity: 0.7;
+            top: -20px;
+            animation: confetti 5s linear infinite;
+        }
 
-.confetti:nth-child(2) {
-    background-color: #00f;
-    left: 20%;
-    animation-duration: 6s;
-    animation-delay: 1s;
-}
+        .confetti:nth-child(2) {
+            background-color: #00f;
+            left: 20%;
+            animation-duration: 6s;
+            animation-delay: 1s;
+        }
 
-.confetti:nth-child(3) {
-    background-color: #0f0;
-    left: 40%;
-    animation-duration: 7s;
-    animation-delay: 2s;
-}
+        .confetti:nth-child(3) {
+            background-color: #0f0;
+            left: 40%;
+            animation-duration: 7s;
+            animation-delay: 2s;
+        }
 
-.confetti:nth-child(4) {
-    background-color: #ff0;
-    left: 60%;
-    animation-duration: 4s;
-    animation-delay: 3s;
-}
+        .confetti:nth-child(4) {
+            background-color: #ff0;
+            left: 60%;
+            animation-duration: 4s;
+            animation-delay: 3s;
+        }
 
-.confetti:nth-child(5) {
-    background-color: #0ff;
-    left: 80%;
-    animation-duration: 5s;
-    animation-delay: 4s;
-}
+        .confetti:nth-child(5) {
+            background-color: #0ff;
+            left: 80%;
+            animation-duration: 5s;
+            animation-delay: 4s;
+        }
 
-.confetti:nth-child(6) {
-    background-color: #f0f;
-    left: 10%;
-    animation-duration: 6.5s;
-    animation-delay: 1.5s;
-}
+        .confetti:nth-child(6) {
+            background-color: #f0f;
+            left: 10%;
+            animation-duration: 6.5s;
+            animation-delay: 1.5s;
+        }
 
-.confetti:nth-child(7) {
-    background-color: #fa0;
-    left: 30%;
-    animation-duration: 5.5s;
-    animation-delay: 2.5s;
-}
+        .confetti:nth-child(7) {
+            background-color: #fa0;
+            left: 30%;
+            animation-duration: 5.5s;
+            animation-delay: 2.5s;
+        }
 
-.confetti:nth-child(8) {
-    background-color: #0af;
-    left: 50%;
-    animation-duration: 6.2s;
-    animation-delay: 3.2s;
-}
+        .confetti:nth-child(8) {
+            background-color: #0af;
+            left: 50%;
+            animation-duration: 6.2s;
+            animation-delay: 3.2s;
+        }
 
-.confetti:nth-child(9) {
-    background-color: #a0f;
-    left: 70%;
-    animation-duration: 4.8s;
-    animation-delay: 1.8s;
-}
+        .confetti:nth-child(9) {
+            background-color: #a0f;
+            left: 70%;
+            animation-duration: 4.8s;
+            animation-delay: 1.8s;
+        }
 
-.confetti:nth-child(10) {
-    background-color: #ff8;
-    left: 90%;
-    animation-duration: 7.2s;
-    animation-delay: 2.8s;
-}
+        .confetti:nth-child(10) {
+            background-color: #ff8;
+            left: 90%;
+            animation-duration: 7.2s;
+            animation-delay: 2.8s;
+        }
 
-@keyframes confetti {
-    0% {
-        transform: translateY(0) rotate(0);
-    }
-    100% {
-        transform: translateY(100vh) rotate(360deg);
-    }
-}
+        @keyframes confetti {
+            0% {
+                transform: translateY(0) rotate(0);
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .thank-you-card h1 {
+                font-size: 2rem;
+            }
+
+            .thank-you-card p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .thank-you-card {
+                padding: 1rem;
+            }
+
+            .thank-you-card h1 {
+                font-size: 1.5rem;
+            }
+
+            .thank-you-card p {
+                font-size: 0.9rem;
+            }
+        }
 
     </style>
 </head>
@@ -157,24 +182,24 @@
         <div class="thank-you-card">
             <h1>Thank You!</h1>
             <p><br>Working with all of you has been an incredibly enriching and rewarding experience.
-                 From the very beginning, I was greeted with such warmth and openness that it immediately felt
-                  like I was part of something truly special. Your unwavering support and encouragement have 
-                  been instrumental in my journey, and I cannot express enough how grateful I am for each of you.
-<br>
-<br>The constructive feedback I received has been incredibly valuable, offering me insights 
+                From the very beginning, I was greeted with such warmth and openness that it immediately felt
+                like I was part of something truly special. Your unwavering support and encouragement have
+                been instrumental in my journey, and I cannot express enough how grateful I am for each of you.
+                <br>
+                <br>The constructive feedback I received has been incredibly valuable, offering me insights
                 and perspectives that have significantly contributed to my growth. Your guidance has helped me navigate
-                 challenges with confidence and has played a crucial role in my development. Every piece of advice, every 
-                 suggestion, and every word of encouragement has made a tangible difference in my professional and personal growth.
+                challenges with confidence and has played a crucial role in my development. Every piece of advice, every
+                suggestion, and every word of encouragement has made a tangible difference in my professional and personal growth.
                 <br>
                 <br>I have particularly appreciated the way you have all been so approachable and willing to share your expertise.
-                 The collaborative environment we've fostered has been inspiring and motivating, making every task and project
-                  an opportunity to learn and excel. Your commitment to helping me succeed has not only enhanced my skills
-                   but has also deepened my appreciation for the work we do together.
+                The collaborative environment we've fostered has been inspiring and motivating, making every task and project
+                an opportunity to learn and excel. Your commitment to helping me succeed has not only enhanced my skills
+                but has also deepened my appreciation for the work we do together.
                 <br><br>
-                  As I reflect on the journey so far, I am genuinely very happy that I got to be a part of the <stromg><strong>NADIYA</strong></stromg> family even though
+                As I reflect on the journey so far, I am genuinely very happy that I got to be a part of the <strong>NADIYA</strong> family even though
                 we were together for a short time, I will be treasuring these memories forever.
-            <br><br>
-            I once again Thank you all for everything you’ve done to support me in my journey.
+                <br><br>
+                I once again Thank you all for everything you’ve done to support me in my journey.
             </p>
         </div>
     </div>
